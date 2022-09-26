@@ -1,4 +1,4 @@
-package main
+package healthcheck
 
 import "sync"
 
@@ -7,7 +7,7 @@ type healthCheck struct {
 	Status int `json:"status"`
 }
 
-func newHealthCheck() *healthCheck {
+func New() *healthCheck {
 	hc := new(healthCheck)
 	hc.UpdateStatus(200)
 
